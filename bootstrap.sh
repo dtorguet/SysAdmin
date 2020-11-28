@@ -90,8 +90,8 @@ sudo rm /etc/filebeat/filebeat.yml
 sudo cp /vagrant/filebeat.yml /etc/filebeat
 
 # load the  index template into Elasticsearch manually:
-sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["10.0.15.31:9201"]'
-sudo filebeat setup -e -E output.logstash.enabled=false -E output.elasticsearch.hosts=['10.0.15.31:9201'] -E setup.kibana.host=10.0.15.31:5601
+# sudo filebeat setup --index-management -E output.logstash.enabled=false -E 'output.elasticsearch.hosts=["10.0.15.31:9201"]'
+# sudo filebeat setup -e -E output.logstash.enabled=false -E output.elasticsearch.hosts=['10.0.15.31:9201'] -E setup.kibana.host=10.0.15.31:5601
 # sudo filebeat setup --pipelines --modules system,nginx,mysql
 #sudo filebeat -e -c filebeat.yml
 sudo filebeat modules enable apache mysql system
