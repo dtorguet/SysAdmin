@@ -21,11 +21,12 @@ filebeat.inputs:
 - type: log
 
   # Change to true to enable this input configuration.
-  enabled: false
+  enabled: true
 
   # Paths that should be crawled and fetched. Glob based paths.
   paths:
     - /var/log/*.log
+    - /var/log/apache2/*.log
     - /usr/share/wordpress/wp-content/*.log
     #- c:\programdata\elasticsearch\logs\*
 

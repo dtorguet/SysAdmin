@@ -38,7 +38,6 @@ sudo cat > /etc/logstash/conf.d/30-elasticsearch-output.conf <<EOF
 output {
   elasticsearch {
     hosts => [ "localhost:9200" ]
-    manage_template => false
     index => "%{[@metadata][beat]}-%{[@metadata][version]}-%{+YYYY.MM.dd}" 
   }
 }
